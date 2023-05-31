@@ -64,42 +64,11 @@ footer {
   right: 0%;
   bottom: 0;
   transition: background-color 0.5s ease-in-out;
+  z-index: 9999; /* Asegurar que el footer se muestre por encima del contenido */
 }
 
 footer:hover {
   background-color: black;
-}
-
-#copyright {
-  color: rgb(128, 128, 128);
-  font-size: 1%;
-}
-
-footer #additional-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 1s cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-footer:hover #additional-content {
-  max-height: 5%;
-  transition: max-height 1s cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-.arrow-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 2%;
-  color: white;
-}
-
-.arrow {
-  border: solid rgb(255, 255, 255);
-  border-width: 0 0.3% 0.3% 0;
-  display: inline-block;
-  padding: 0.3%;
-  transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
 }
 
 section {
@@ -170,5 +139,9 @@ section {
 
   .container {
       padding: 2%;
+  }
+
+  section {
+      margin-bottom: 10%; /* Aumentar el margen inferior para evitar que el contenido se coloque debajo del footer */
   }
 }
