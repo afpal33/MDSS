@@ -144,3 +144,31 @@ section {
 .row {
   margin-right: 0.5%;
 }
+
+/* Consultas de medios para dispositivos móviles */
+
+@media (max-width: 768px) {
+  header {
+      padding: 5%;
+  }
+
+  nav a {
+      padding: 3% 6%;
+      font-size: 3%;
+      margin: 0 3%;
+  }
+
+  .arrow-container {
+      margin-top: 5%;
+  }
+
+  .title {
+      padding: 2%;
+      width: 10%;
+      border-radius: 10%;
+  }
+
+  .container {
+      padding: 2%;
+  }
+}
