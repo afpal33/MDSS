@@ -13,8 +13,8 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  padding: 10%;
-  border-radius: 5%;
+  padding: 2%;
+  border-radius: 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,10 +30,10 @@ nav {
 nav a {
   color: rgb(255, 255, 255);
   text-decoration: none;
-  font-size: 16px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin: 0 10px;
+  font-size: 1.6%;
+  padding: 1% 2%;
+  border-radius: 0.5%;
+  margin: 0 1%;
   transition: all 0.3s ease-in-out;
 }
 
@@ -72,7 +72,7 @@ footer:hover {
 
 #copyright {
   color: rgb(128, 128, 128);
-  font-size: 100%;
+  font-size: 1%;
 }
 
 footer #additional-content {
@@ -82,38 +82,38 @@ footer #additional-content {
 }
 
 footer:hover #additional-content {
-  max-height: 500px;
+  max-height: 5%;
   transition: max-height 1s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .arrow-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 2%;
   color: white;
 }
 
 .arrow {
   border: solid rgb(255, 255, 255);
-  border-width: 0 3px 3px 0;
+  border-width: 0 0.3% 0.3% 0;
   display: inline-block;
-  padding: 3px;
+  padding: 0.3%;
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
 }
 
 section {
-  padding: 1%;
-  margin-bottom: 7%;
+  padding: 0.2%;
+  margin-bottom: 0.7%;
 }
 
 .title {
   background-color: rgba(0, 0, 0, 0.272);
   transition: background-color 0.5s ease-in-out;
-  padding: 2%;
-  width: 30%;
+  padding: 0.4%;
+  width: 3%;
   margin: 0 auto;
-  border-radius: 30px;
+  border-radius: 3%;
 }
 
 .title:hover {
@@ -121,7 +121,7 @@ section {
 }
 
 .container {
-  padding: 2%;
+  padding: 0.4%;
   margin: 0 auto;
 }
 
@@ -129,9 +129,9 @@ section {
   background-color: black;
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
+  padding: 1% 2%;
+  border-radius: 0.5%;
+  font-size: 1.6%;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
@@ -142,5 +142,5 @@ section {
 }
 
 .row {
-  margin-right: 5px;
+  margin-right: 0.5%;
 }
