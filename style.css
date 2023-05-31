@@ -64,7 +64,7 @@ footer {
   right: 0%;
   bottom: 0;
   transition: background-color 0.5s ease-in-out;
-  z-index: 9999; /* Asegurar que el footer se muestre por encima del contenido */
+  z-index: 9999;
 }
 
 footer:hover {
@@ -74,6 +74,9 @@ footer:hover {
 section {
   padding: 0.2%;
   margin-bottom: 0.7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .title {
@@ -133,15 +136,19 @@ section {
 
   .title {
       padding: 2%;
-      width: 10%;
+      width: 80%;
       border-radius: 10%;
   }
 
   .container {
       padding: 2%;
+      width: 90%;
   }
 
   section {
-      margin-bottom: 10%; /* Aumentar el margen inferior para evitar que el contenido se coloque debajo del footer */
+      margin-bottom: 10%;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
   }
 }
