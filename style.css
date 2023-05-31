@@ -1,0 +1,138 @@
+html, body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url('Images/blackback2.jpg');
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.122);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    border-radius: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+    width: 100%;
+    
+}
+
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+  nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  nav a:hover{
+    background-color: white;
+    color: black;
+  }
+
+  nav a.active {
+    background-color: white;
+    color: black;
+}
+
+nav a.active:hover {
+    background-color: white;
+    color: black;
+}
+
+
+header:hover{
+    background-color: black;
+}
+footer{
+    background-color: rgba(0, 0, 0, 0.333);
+    color:white;
+    position: fixed;
+    left: 0%;
+    right: 0%;
+    bottom: 0;
+    transition: background-color 0.5s ease-in-out;
+}
+footer:hover{
+    background-color: black;
+}
+ #copyright{
+    color: rgb(128, 128, 128);
+    font-size: 100%;
+ }
+ footer #additional-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+footer:hover #additional-content {
+  max-height: 500px;
+  transition: max-height 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  color: white;
+}
+
+.arrow {
+  border: solid rgb(255, 255, 255);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+section{
+  padding: 1%;
+  margin-bottom: 7%;
+}
+.title{
+    background-color: rgba(0, 0, 0, 0.272);
+    transition: background-color 0.5s ease-in-out;
+    padding: 2%;
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+.title:hover{
+    background-color: rgba(0, 0, 0, 0.829);
+}
+
+.container{
+  padding:2%;
+  margin: 0 auto;
+}
+
+.buttons {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.buttons:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.row{
+  margin-right: 5px;
+}
