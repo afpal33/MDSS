@@ -2,6 +2,8 @@ html, body {
   height: 100%;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-image: url('Images/blackback2.jpg');
+  margin: 0;
+  padding: 0;
 }
 
 .wrapper {
@@ -15,31 +17,40 @@ html, body {
 }
 
 header {
+  position: relative;
   background-color: rgba(0, 0, 0, 0.122);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   color: rgb(255, 255, 255);
-  padding: 2%;
-  border-radius: 2%;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: background-color 0.3s ease-in-out;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.menu-icon {
+  display: none;
 }
 
 nav {
   display: flex;
-  justify-content: center;
 }
 
 nav a {
   color: rgb(255, 255, 255);
   text-decoration: none;
-  font-size: 1.6%;
-  padding: 1% 2%;
-  border-radius: 0.5%;
-  margin: 0 1%;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 10px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -53,101 +64,74 @@ nav a.active {
   color: black;
 }
 
-nav a.active:hover {
-  background-color: white;
-  color: black;
-}
-
-header:hover {
-  background-color: black;
-}
-
-footer {
-  background-color: rgba(0, 0, 0, 0.333);
-  color: white;
-  transition: background-color 0.5s ease-in-out;
-  flex-shrink: 0;
-  padding: 2% 0;
-}
-
-footer:hover {
-  background-color: black;
-}
-
-section {
-  padding: 0.2%;
-  margin-bottom: 0.7%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.title {
-  background-color: rgba(0, 0, 0, 0.272);
-  transition: background-color 0.5s ease-in-out;
-  padding: 0.4%;
-  width: 3%;
-  margin: 0 auto;
-  border-radius: 3%;
-}
-
-.title:hover {
-  background-color: rgba(0, 0, 0, 0.829);
-}
-
-.container {
-  padding: 0.4%;
-  margin: 0 auto;
-}
-
-.buttons {
-  background-color: black;
-  color: white;
-  border: none;
-  padding: 1% 2%;
-  border-radius: 0.5%;
-  font-size: 1.6%;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.buttons:hover {
-  background-color: white;
-  color: black;
-  cursor: pointer;
-}
-
-.row {
-  margin-right: 0.5%;
-}
-
-/* Consultas de medios para dispositivos móviles */
-
 @media (max-width: 768px) {
-  header {
-      padding: 5%;
-  }
-
-  nav a {
-      padding: 3% 6%;
-      font-size: 3%;
-      margin: 0 3%;
-  }
-
-  .title {
-      padding: 2%;
-      width: 80%;
-      border-radius: 10%;
-  }
-
-  .container {
-      padding: 2%;
-      width: 90%;
-  }
-
-  section {
-      margin-bottom: 10%;
+  .header-content {
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
+  }
+
+  h1 {
+      margin-top: 10px;
+  }
+
+  .menu-icon {
+      display: block;
+      width: 30px;
+      height: 30px;
+      background-color: rgba(255, 255, 255, 0.5);
+      position: relative;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease-in-out;
+  }
+
+  .menu-icon::before,
+  .menu-icon::after {
+      content: "";
+      position: absolute;
+      background-color: rgb(255, 255, 255);
+      width: 20px;
+      height: 2px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 0.3s ease-in-out;
+  }
+
+  .menu-icon::before {
+      transform: translate(-50%, -70%);
+  }
+
+  .menu-icon::after {
+      transform: translate(-50%, -30%);
+  }
+
+  #menu-toggle {
+      display: none;
+  }
+
+  #menu-toggle:checked + .menu-icon::before {
+      transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  #menu-toggle:checked + .menu-icon::after {
+      transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  #menu-toggle:checked ~ nav {
+      display: block;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.8);
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 10px 0;
       text-align: center;
+      border-radius: 5px;
+  }
+
+  #menu-toggle:checked ~ nav a {
+      display: block;
+      margin: 10px;
   }
 }
