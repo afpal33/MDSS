@@ -12,31 +12,35 @@
 </head>
 <body>
     <header>
-    <img src="Images/ucb logo.png" alt="Logo de la empresa" width="4%">
-<h1>Modelado, Dinámica de Sistemas y Simulación: Práctica #5</h1>
-<br>
-<nav>
-    <a href="index.html" id="index-link">DPF</a>
-    <a href="mp.html" id="mp-link">MP</a>
-    <a href="dados.html" id="dados-link">Dados</a>
-    <a href="clientes.html" id="clientes-link">Tienda</a>
-</nav>
-<br>
-
-<script>
-    var currentPage = window.location.href;
-    if (currentPage.indexOf("index.html") != -1) {
-        document.getElementById("index-link").classList.add("active");
-    } else if (currentPage.indexOf("mp.html") != -1) {
-        document.getElementById("mp-link").classList.add("active");
-    } else if (currentPage.indexOf("dados.html") != -1) {
-        document.getElementById("dados-link").classList.add("active");
-    } else if (currentPage.indexOf("clientes.html") != -1) {
-        document.getElementById("clientes-link").classList.add("active");
-    }
-</script>
-
-
+        <div class="header-content">
+            <img src="Images/ucb logo.png" alt="Logo de la empresa" width="4%">
+            <h1>Modelado, Dinámica de Sistemas y Simulación: Práctica #5</h1>
+        </div>
+        <nav>
+        <div class="col-md-3 mx-auto">
+            <a href="index.html" id="index-link" style="margin-right: 90px">DPF</a>
+            <h1>&nbsp;</h1>
+            <a href="mp.html" id="mp-link">MP</a>
+        </div>
+        <div class="col-md-3 mx-auto">
+            <a href="dados.html" id="dados-link">Dados</a>
+            <h1>&nbsp;</h1>
+            <a href="clientes.html" id="clientes-link">Tienda</a>
+        </div>
+        </nav>
+    
+        <script>
+            var currentPage = window.location.href;
+            if (currentPage.indexOf("index.html") != -1) {
+                document.getElementById("index-link").classList.add("active");
+            } else if (currentPage.indexOf("mp.html") != -1) {
+                document.getElementById("mp-link").classList.add("active");
+            } else if (currentPage.indexOf("dados.html") != -1) {
+                document.getElementById("dados-link").classList.add("active");
+            } else if (currentPage.indexOf("clientes.html") != -1) {
+                document.getElementById("clientes-link").classList.add("active");
+            }
+        </script>
     </header>
     <section>
         <div class="title">

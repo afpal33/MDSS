@@ -54,6 +54,10 @@ nav a {
   transition: all 0.3s ease-in-out;
 }
 
+#b1 {
+  margin-bottom: 100px;
+}
+
 nav a:hover {
   background-color: white;
   color: black;
