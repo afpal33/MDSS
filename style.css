@@ -1,6 +1,17 @@
 html, body {
+  height: 100%;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-image: url('Images/blackback2.jpg');
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
 }
 
 header {
@@ -9,17 +20,12 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   color: rgb(255, 255, 255);
-  position: static;
-  top: 0;
-  left: 0;
-  right: 0;
   padding: 2%;
   border-radius: 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: background-color 0.3s ease-in-out;
-  width: 100%;
 }
 
 nav {
@@ -59,12 +65,9 @@ header:hover {
 footer {
   background-color: rgba(0, 0, 0, 0.333);
   color: white;
-  position: fixed;
-  left: 0%;
-  right: 0%;
-  bottom: 0;
   transition: background-color 0.5s ease-in-out;
-  z-index: 9999;
+  flex-shrink: 0;
+  padding: 2% 0;
 }
 
 footer:hover {
@@ -128,10 +131,6 @@ section {
       padding: 3% 6%;
       font-size: 3%;
       margin: 0 3%;
-  }
-
-  .arrow-container {
-      margin-top: 5%;
   }
 
   .title {
