@@ -119,7 +119,6 @@ function clientes(){
     ventanaEmergente.document.write("<html><head><link rel='stylesheet' href='style.css'><title>Resultados Simulaciones</title><style>table, th, td { border: 1px solid white; border-collapse: collapse; padding: 5px; color:white;} h1{ color:white}</style></head><body><center><div class='title'><h1>Resultados</h1></div><table>");
     ventanaEmergente.document.write("<tr><th>Simulación</th><th>Ganancia Promedio Neta diaria</th><th>Cantidad promedio ventas diaria</th></tr>");
     while (i<=SIM){
-        // reset CHR and TCART for each hour of the day
         CHR = 0;
         TCART = 0;
         while(CHR < NHR){
@@ -151,7 +150,6 @@ function clientes(){
                 CCLIE = 0;
             }
         }
-        // calculate GNETA and TTCART for the day
         var GNETA = (TCART * (PVU-CUA))-CFIJO;
         sumg = sumg+GNETA;
         var TTCART = TCART/CCLIE;
